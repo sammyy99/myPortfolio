@@ -1,9 +1,10 @@
 import React from 'react'
 import MainContainer from './Components/MainContainer'
+import './index.css';
 
 const App = () => {
   return (
-    <div>
+    <div className=''>
       <MainContainer/>
     </div>
   )

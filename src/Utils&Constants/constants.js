@@ -1,0 +1,1 @@
+export const homeData = "Specializing in full-stack development, I excel in crafting end-to-end web applications for businesses. With expertise in front-end and back-end development, I ensure seamless responsiveness for optimal user experiences."
