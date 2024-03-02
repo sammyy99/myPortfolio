@@ -9,7 +9,7 @@ const Home = () => {
         autoPlay
         loop
         muted
-        className="absolute h-screen w-full object-fill "
+        className="absolute h-screen w-full object-fill bg-gradient-to-b "
       >
         <source src="bgAbout.mp4" type="video/mp4" />
       </video>
@@ -41,8 +41,8 @@ const Home = () => {
         </div>
 
         <div className="col-span-6 my-auto mx-20 text-2xl text-green-400">
-          <div className="flex justify-center font-normal">{homeData}</div>
-          <div className="flex justify-center my-10">
+          <div className="font-mono">{homeData}</div>
+          <div className=" my-10">
             <button className="bg-black border border-green-500 px-4 py-1 rounded-lg hover:cursor-pointer hover:text-green-300 hover:border-green-300 hover:text-3xl transition-all translate-300">
               Get in touch
             </button>
