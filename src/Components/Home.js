@@ -4,7 +4,7 @@ import { homeData } from "../Utils&Constants/constants";
 
 const Home = () => {
   return (
-    <div className="relative font-mono font-semibold">
+    <div id="home" className="relative font-mono font-semibold">
       <video
         autoPlay
         loop

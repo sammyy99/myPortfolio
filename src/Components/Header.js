@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CodeOffIcon from "@mui/icons-material/CodeOff";
 import InfoIcon from "@mui/icons-material/Info";
 import WorkIcon from "@mui/icons-material/Work";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import BookIcon from "@mui/icons-material/Book";
 import HomeIcon from "@mui/icons-material/Home";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [scrollStatus, setScrollStatus] = useState(false);
@@ -17,7 +18,7 @@ const Header = () => {
     }
   };
 
-  useState(() => {
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -38,25 +39,77 @@ const Header = () => {
       </div>
       <div className="col-span-8 flex justify-center">
         <ul className="flex space-x-10 text-green-500 hover:cursor-pointer text-xl">
+        <Link
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
           <li className="hover:text-green-300 hover:bg-green-300 hover:bg-opacity-5 rounded-full hover:text-2xl transition-all translate-300">
             <HomeIcon /> Home
           </li>
-          <li className="hover:text-green-300 hover:bg-green-300 hover:bg-opacity-5 rounded-full hover:text-2xl transition-all translate-300">
+          </Link>
+
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            <li className="hover:text-green-300 hover:bg-green-300 hover:bg-opacity-5 rounded-full hover:text-2xl transition-all translate-300">
             <InfoIcon /> About
-          </li>
-          <li className="hover:text-green-300 hover:bg-green-300 hover:bg-opacity-5 rounded-full hover:text-2xl transition-all translate-300">
-            <WorkIcon /> Projects
-          </li>
+           </li>
+          </Link>
+          
+
+          <Link
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            <li className="hover:text-green-300 hover:bg-green-300 hover:bg-opacity-5 rounded-full hover:text-2xl transition-all translate-300">
+              <WorkIcon /> Projects
+            </li>
+          </Link>
+
+          <Link
+            activeClass="active"
+            to="services"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
           <li className="hover:text-green-300 hover:bg-green-300 hover:bg-opacity-5 rounded-full hover:text-2xl transition-all translate-300">
             <SupportAgentIcon /> Services
           </li>
+          </Link>
+
+          <Link
+            activeClass="active"
+            to="blogs"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
           <li className="hover:text-green-300 hover:bg-green-300 hover:bg-opacity-5 rounded-full hover:text-2xl transition-all translate-300">
             <BookIcon /> Blogs
           </li>
+          </Link>
         </ul>
       </div>
       <div className="flex justify-center col-span-2 text-green-500 text-xl font-bold hover:cursor-pointer hover:text-green-300 hover:text-2xl transition-all translate-300">
-        <button className="bg-black border border-green-500 px-4 py-1 rounded-lg">Contact me</button>
+        <button className="bg-black border border-green-500 px-4 py-1 rounded-lg">
+          Contact me
+        </button>
       </div>
     </div>
   );

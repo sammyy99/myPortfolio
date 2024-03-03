@@ -3,7 +3,7 @@ import { service1, service2 } from "../Utils&Constants/constants";
 
 const Services = () => {
   return (
-    <div className="text-green-500 mt-6  mx-6 py-10 bg-black bg-opacity-50 rounded-lg font-mono">
+    <div id="services" className="text-green-500 mt-6  mx-6 py-10 bg-black bg-opacity-50 rounded-lg font-mono">
       <div className="flex justify-center text-4xl font-semibold">Services</div>
 
       <div className="mx-48 my-12">
