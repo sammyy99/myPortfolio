@@ -21,13 +21,13 @@ const About = () => {
 
 
   return (
-    <div id='about' className='text-green-500 mt-6  mx-6 py-10 bg-black bg-opacity-50 rounded-lg font-mono'>
-        <div className='flex justify-center text-4xl font-semibold'>{"About me"}</div>
-        <div className='grid grid-cols-12 my-12'>
-            <div className='col-span-6'>
+    <div id='about' className='text-green-500 mt-2 md:mt-6 mx-2 md:mx-6 py-6 md:py-10 bg-black bg-opacity-50 rounded-lg font-mono'>
+        <div className='flex justify-center text-3xl md:text-4xl font-semibold'>{"About me"}</div>
+        <div className='md:flex md:justify-between my-6 md:my-12'>
+            <div className='md:w-1/2'>
               <div className=''>
-                <div className='flex justify-center '>
-                    <img alt='' className='w-[35rem] rounded-3xl shadow-md shadow-green-500' src={aboutImg[imgIndex]}></img>
+                <div className='flex justify-center px-3 md:px-0 '>
+                    <img alt='' className='md:w-[35rem] rounded-3xl shadow-md shadow-green-500' src={aboutImg[imgIndex]}></img>
                 </div>
                 <div className='flex justify-center mt-8 text-xl'>
                 <Typewriter
@@ -42,10 +42,10 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className='col-span-6'>
-            <div className='my-8 mx-8'>
+            <div className='md:w-1/2'>
+            <div className='my-8 mx-4 md:mx-8 text-center md:text-left'>
                 <div>{aboutMe1}</div>
-                <div className='my-10'>{aboutMe2}</div>
+                <div className='my-6 md:my-10'>{aboutMe2}</div>
                 <div>{aboutMe3}</div>
             </div>
             </div>

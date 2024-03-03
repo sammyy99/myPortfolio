@@ -40,18 +40,18 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed w-full flex justify-between px-6 bg-black py-5 rounded-md ${
+      className={`fixed w-full flex justify-between px-3 md:px-6 bg-black py-4 md:py-5 rounded-md ${
         scrollStatus ? "bg-opacity-100" : "bg-opacity-50"
       } shadow-lg shadow-green-500 text-xl font-mono font-bold z-20`}
     >
-      <div className="flex justify-center col-span-2 text-green-500 hover:cursor-pointer text-xl font-bold">
-        <div className="mr-4">
+      <div className="flex my-auto text-green-500 hover:cursor-pointer text-xl font-bold">
+        <div className="mr-2 md:mr-4">
           <CodeOffIcon />
         </div>
         <div>SAMARTH</div>
       </div>
 
-      <div className="col-span-8 flex justify-center">
+      <div className="md:flex hidden my-auto">
         <ul className="flex space-x-8 text-green-500 hover:cursor-pointer text-xl">
           <Link
             activeClass="text-green-300  text-2xl transition-all translate-300"
@@ -165,7 +165,7 @@ const Header = () => {
           </Link>
         </ul>
       </div>
-      <div className="flex justify-center col-span-2 text-green-500 text-xl font-bold hover:cursor-pointer hover:text-green-300 hover:text-2xl transition-all translate-300">
+      <div className="flex my-auto justify-center col-span-2 text-green-500 text-xl font-bold hover:cursor-pointer hover:text-green-300 hover:text-2xl transition-all translate-300">
         <button
           onClick={() => {
             handleGetForm();

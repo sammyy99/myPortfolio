@@ -32,8 +32,8 @@ const Contact = () => {
 
   return (
     <div  className="fixed my-auto h-screen w-full flex justify-center z-30">
-      <div className="my-auto mx-6 w-1/2 z-40 ">
-        <div className=" bg-black py-8 px-2 font-mono text-green-500 border border-green-500 rounded-xl">
+      <div className="my-auto mx-3 w-full md:w-1/2 z-40 ">
+        <div className=" bg-black pt-1 pb-8 px-1 md:px-2 font-mono text-green-500 border border-green-500 rounded-xl">
 
           <div className="flex justify-end">
             <img
