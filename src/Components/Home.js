@@ -5,27 +5,22 @@ import { useDispatch } from "react-redux";
 import { getform } from "../Redux/formSlice";
 
 const Home = () => {
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
-
-  const handleGetForm = ()=>{
-    dispatch(getform())
-  }
+  const handleGetForm = () => {
+    dispatch(getform());
+  };
 
   return (
-    <div id="home" className="relative font-mono font-semibold">
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute h-screen w-full object-fill bg-gradient-to-b "
-      >
+    <div id="home" className=" relative font-mono font-semibold w-full h-full pb-20">
+      
+      <video autoPlay loop muted className="absolute h-full w-full object-cover">
         <source src="bgAbout.mp4" type="video/mp4" />
       </video>
+      
+      <div className="h-40"></div>
 
-      <div className="h-48"></div>
-
-      <div className="text-white grid grid-cols-12  mx-32 bg-black bg-opacity-80 rounded-lg z-10 relative">
+      <div className="text-white grid grid-cols-12 mx-6 bg-black bg-opacity-80 rounded-lg z-10 relative">
         <div className="col-span-6 flex justify-center my-24">
           <div>
             <div className="flex justify-center">
@@ -37,7 +32,10 @@ const Home = () => {
             </div>
             <div className="flex justify-center text-3xl my-10  text-green-500">
               <Typewriter
-                words={["< Samarth Bhardwaj />", "< Full-Stack Web-Developer />"]}
+                words={[
+                  "< Samarth Bhardwaj />",
+                  "< Full-Stack Web-Developer />",
+                ]}
                 loop={true}
                 cursor
                 cursorStyle="_"
@@ -52,7 +50,12 @@ const Home = () => {
         <div className="col-span-6 my-auto mx-20 text-2xl text-green-400">
           <div className="font-mono">{homeData}</div>
           <div className=" my-10">
-            <button onClick={()=>{handleGetForm()}} className="bg-black border border-green-500 px-4 py-1 rounded-lg hover:cursor-pointer hover:text-green-300 hover:border-green-300 hover:text-3xl transition-all translate-300">
+            <button
+              onClick={() => {
+                handleGetForm();
+              }}
+              className="bg-black border border-green-500 px-4 py-1 rounded-lg hover:cursor-pointer hover:text-green-300 hover:border-green-300 hover:text-3xl transition-all translate-300"
+            >
               Get in touch
             </button>
           </div>

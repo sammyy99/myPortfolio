@@ -20,7 +20,7 @@ const MainContainer = () => {
       <div className="relative bg-zinc-900">
         {form?<Contact/>:""}
         <Header />
-        <Home />
+        <Home/>
         <About />
         <Projects />
         <Services />
