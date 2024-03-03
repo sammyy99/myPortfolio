@@ -1,8 +1,17 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { homeData } from "../Utils&Constants/constants";
+import { useDispatch } from "react-redux";
+import { getform } from "../Redux/formSlice";
 
 const Home = () => {
+
+  const dispatch = useDispatch()
+
+  const handleGetForm = ()=>{
+    dispatch(getform())
+  }
+
   return (
     <div id="home" className="relative font-mono font-semibold">
       <video
@@ -43,7 +52,7 @@ const Home = () => {
         <div className="col-span-6 my-auto mx-20 text-2xl text-green-400">
           <div className="font-mono">{homeData}</div>
           <div className=" my-10">
-            <button className="bg-black border border-green-500 px-4 py-1 rounded-lg hover:cursor-pointer hover:text-green-300 hover:border-green-300 hover:text-3xl transition-all translate-300">
+            <button onClick={()=>{handleGetForm()}} className="bg-black border border-green-500 px-4 py-1 rounded-lg hover:cursor-pointer hover:text-green-300 hover:border-green-300 hover:text-3xl transition-all translate-300">
               Get in touch
             </button>
           </div>
